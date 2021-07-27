@@ -4,15 +4,15 @@ import {promises as fs} from "fs"
 let Path = null;
 
 export default {
-  async read() {
+  async index() {
     // go to our file and parse out the data there
-    return JSON.parse(await fs.readFile(`${Path}/Develop/db/db.json`, "utf8"));
+    return JSON.parse(await fs.readFile(`${Path}/db/db.json`, "utf8"));
   },
     // 
-    async save(newEntry) {
-      const currentNotes = await this.read();
+    async create(newEntry) {
+      const currentNotes = await this.index();
       fs.writeFile(
-        `${Path}/Develop/db/db.json`, JSON.stringify([... currentNotes, newEntry])    
+        `${Path}/db/db.json`, JSON.stringify([... currentNotes, newEntry])    
     );
   },
 };

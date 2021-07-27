@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3333;
 const site = express();
 
 // setting up the page data to use for the sever
-site.use(express.static("Develop/public"));
+site.use(express.static("public"));
 
 // allows site to parse json data
 site.use(express.json());

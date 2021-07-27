@@ -2,7 +2,7 @@
   "name": "note-taker",
   "version": "1.0.0",
   "description": "",
-  "main": "Develop/server.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "nodemon -I --watch app"
