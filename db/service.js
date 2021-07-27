@@ -20,4 +20,4 @@ export default {
 (async () => {
   //sets path as the full path data to the base folder
   Path = await fs.realpath("./")
-})()
+})();
